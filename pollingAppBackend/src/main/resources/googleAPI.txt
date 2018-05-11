@@ -1,0 +1,7 @@
+Here is your client ID
+
+332429685179-fp41tirll365ue6knd099n37bqtku0tt.apps.googleusercontent.com
+
+Here is your client secret
+
+1okIzXLlV4eaSD-Qbw3F4GB-
