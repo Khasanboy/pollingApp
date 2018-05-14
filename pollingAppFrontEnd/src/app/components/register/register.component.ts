@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  name:string;
+  username:string;
+  email:string;
+  password:string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  register(){
+    const user={
+      name:this.name,
+      username: this.username,
+      email:this.email,
+      password: this.password
+    }
   }
 
 }
