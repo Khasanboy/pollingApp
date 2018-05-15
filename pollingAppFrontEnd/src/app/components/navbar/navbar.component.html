@@ -1,16 +1,14 @@
-
-
 <mat-toolbar style="background-color: rgb(239, 246, 253); border-bottom: 1px solid rgba(216, 216, 212, 0.185); color:#40a9ff" role="header">
   <mat-toolbar-row >
     <span style="margin-left:10%">
       <mat-icon>mood</mat-icon>
     </span>
-    <span>Polling App</span>
+    <span style="cursor: pointer;">Polling App</span>
     <mat-nav-list role="navigation" style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%; margin:0 10%;">
-        <a mat-list-item [routerLinkActive]="['active']" routerLink="login">Login</a>
-        <a mat-list-item [routerLinkActive]="['active']" routerLink="register">Register</a>
-        <a mat-list-item [routerLinkActive]="['active']" routerLink="/"><mat-icon>home</mat-icon></a>
-        <a mat-list-item [routerLinkActive]="['active']" routerLink="poll"><mat-icon>poll</mat-icon></a>
+        <a mat-list-item [routerLinkActive]="['active']" [routerLink]="['/login']">Login</a>
+        <a mat-list-item [routerLinkActive]="['active']" [routerLink]="['/register']">Register</a>
+        <a mat-list-item [routerLinkActive]="['active']" [routerLink]="['/']"><mat-icon>home</mat-icon></a>
+        <a mat-list-item [routerLinkActive]="['active']" [routerLink]="['/poll']"><mat-icon>poll</mat-icon></a>
         <a mat-list-item [routerLinkActive]="['active']" [matMenuTriggerFor]="dropDown"><mat-icon>person</mat-icon></a>
         <mat-menu #dropDown="matMenu" [overlapTrigger]="false">
           <div style="line-height: 0.3em; margin:10px">
@@ -18,8 +16,8 @@
               <p style="font-size: 14px; color:rgb(104, 101, 101)">@tsar</p>
           </div>
           <hr>
-          <button mat-menu-item [routerLinkActive]="['active']" routerLink="/profile">Profile</button>
-          <button mat-menu-item [routerLinkActive]="['active']" routerLink="/logout">Logout</button>
+          <button mat-menu-item [routerLinkActive]="['active']" [routerLink]="['/profile']">Profile</button>
+          <button mat-menu-item [routerLinkActive]="['active']" [routerLink]="['/logout']">Logout</button>
         </mat-menu>
     </mat-nav-list>
   </mat-toolbar-row>

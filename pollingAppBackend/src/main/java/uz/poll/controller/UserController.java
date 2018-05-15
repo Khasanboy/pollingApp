@@ -69,6 +69,8 @@ public class UserController {
 	@GetMapping("/username/{username}")
 	public UserProfile getUserProfile(@PathVariable(value = "username") String username) {
 		
+		System.out.println(username);
+		
 		User user = userRepository.findByUsername(username)
 				.orElseThrow(()-> new ResourceNotFoundException("User", "username", username));
 		
@@ -76,6 +78,8 @@ public class UserController {
 		long voteCount = voteRepository.countByUserId(user.getId());
 		
 		UserProfile userProfile = new UserProfile(user.getId(), user.getUsername(), user.getName(), user.getCreatedAt(), pollCount, voteCount);
+		
+		System.out.println(userProfile);
 		
 		return userProfile;		
 		
